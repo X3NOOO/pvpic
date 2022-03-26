@@ -1,2 +1,2 @@
 # pvpic
-vpic is tool to clear, fake, and do other cool things with metadata of yout images
+pvpic is tool to clear, fake, and do other cool things with metadata of your images
