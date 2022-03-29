@@ -13,3 +13,12 @@
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
+
+bin/
+test
+test*
+test.*
+tests/
+.vscode/
+clean_test.*
+*test.*
