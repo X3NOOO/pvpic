@@ -26,6 +26,7 @@ import (
 
 var (
 	Verbose int
+	Testing bool
 )
 
 // rootCmd represents the base command when called without any subcommands
@@ -69,6 +70,7 @@ func init() {
 	// when this action is called directly.
 	// rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 	rootCmd.PersistentFlags().IntVarP(&Verbose, "verbose", "v", 3, "verbosity of output (0-5)")
+	rootCmd.PersistentFlags().BoolVar(&Testing, "testing", false, "if testing is enabled changes won't be written")
 }
 
 
