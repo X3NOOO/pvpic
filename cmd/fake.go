@@ -77,6 +77,7 @@ func fake(args []string) {
 		if err != nil {
 			l.Warningln(1, "Could not clean file:", file)
 		}
+		l.Debugln("cleaned:", cleaned)
 
 		// check if model folder is valid
 		if(model_folder[len(model_folder)-1:] != "/"){
@@ -99,7 +100,7 @@ func fake(args []string) {
 		if(err != nil){
 			l.Fatalln(1, "while adding fake metadata:", err)
 		}
-		_ = faked
+		l.Debugln("faked:", faked)
 
 		// get extension of file
 		new_name := utils.AddBeforeDot(file, "_clean")
@@ -107,7 +108,7 @@ func fake(args []string) {
 
 		// write cleaned file
 		if !Testing {
-			err = ioutil.WriteFile(new_name, cleaned, 0644)
+			err = ioutil.WriteFile(new_name, faked, 0644)
 			if err != nil {
 				l.Warningln(1, "Could not write file:", err)
 			}

@@ -8,6 +8,11 @@ require (
 )
 
 require (
+	github.com/dsoprea/go-jpeg-image-structure/v2 v2.0.0-20210512043942-b434301c6836 // indirect
+	github.com/sfomuseum/go-exif-update v0.1.0 // indirect
+)
+
+require (
 	github.com/dsoprea/go-exif v0.0.0-20210625224831-a6301f85c82b // indirect
 	github.com/dsoprea/go-exif/v2 v2.0.0-20210625224831-a6301f85c82b // indirect
 	github.com/dsoprea/go-exif/v3 v3.0.0-20210625224831-a6301f85c82b // indirect

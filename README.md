@@ -2,6 +2,6 @@
 
 ## TODO
 
-[X] clean
-[ ] fake
-[ ] database with example configurations
+- [X] clean
+- [ ] fake
+- [ ] database with example configurations

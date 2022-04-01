@@ -3,13 +3,11 @@ package utils
 import (
 	"encoding/json"
 	"io/ioutil"
-
-	"github.com/X3NOOO/pvpic/pvpic"
 )
 
 
-func ReadModel(path string)(pvpic.Model, error){
-	var model pvpic.Model
+func ReadModel(path string)(map[string]interface{}, error){
+	var model map[string]interface{}
 	// read file in path
 	model_json, err := ioutil.ReadFile(path)
 	if(err != nil){
