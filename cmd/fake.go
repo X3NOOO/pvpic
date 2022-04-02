@@ -40,6 +40,7 @@ var fakeCmd = &cobra.Command{
 var (
 	model 			string
 	model_folder 	string
+	current_time 	bool
 )
 
 /*
@@ -96,7 +97,7 @@ func fake(args []string) {
 		
 
 		// add fake metadata from model to image
-		faked, err := pvpic.Fake(cleaned, model)
+		faked, err := pvpic.Fake(cleaned, model, current_time)
 		if(err != nil){
 			l.Fatalln(1, "while adding fake metadata:", err)
 		}
@@ -131,5 +132,7 @@ func init() {
 
 	fakeCmd.Flags().StringVarP(&model, "model", "m", "none", "select model to use metadata from")
 	fakeCmd.Flags().StringVarP(&model_folder, "database", "d", values.HOME + "/.config/pvpic/db/", "database path")
+	fakeCmd.Flags().BoolVarP(&current_time, "time", "t", false, "use current time as a image timestamp")
+
 	fakeCmd.MarkFlagRequired("model")
 }
